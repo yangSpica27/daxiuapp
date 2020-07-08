@@ -1,0 +1,70 @@
+{	"easycom": {
+		"^u-(.*)": "@/lib/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页,
+		{
+			"path": "pages/login/login",
+			"style": {}
+		}, {
+			"path": "pages/login/forget",
+			"style": {}
+		}, {
+			"path": "pages/login/register",
+			"style": {}
+		}
+
+		,
+		//大布局页
+		{
+			"path": "pages/index/index",
+			"style": {}
+		}
+	    ,{
+            "path" : "pages/startcheck/startcheck",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/evaluate/evaluate",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/evaluate/befored/befored",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/evaluate/working/working",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/evaluate/safe/safe",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/evaluate/summary/summary",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/improvement/improvement",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/ring/ring",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/readpackagefeedback/readpackagefeedback",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/readpackagefeedback/feedbackdetail/feedbackdetail",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "大修质量",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
+	}
+}
