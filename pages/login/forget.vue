@@ -1,13 +1,21 @@
 <template>
 	<view class="forget">
 
+		<cu-custom bgImage="linear-gradient(to right, #1890FF, #69C0FF)" :isBack="true" :isShadown="false">
+			<block slot="backText" @click="backlogin">返回</block>
+			<block slot="content">忘记密码</block>
+
+		</cu-custom>
+
 		<view class="content">
+
 			<!-- 主体 -->
 			<view class="main">
-				<view class="tips">若你忘记了密码，可在此重置新密码。</view>
+				<view class="tips">若您忘记了密码，可在此重置新密码。</view>
 				<wInput v-model="phoneData" type="text" maxlength="11" placeholder="请输入手机号码"></wInput>
+				<wInput v-model="personId" type="text" maxlength="11" placeholder="请输入身份证号"></wInput>
+				<wInput v-model="emplyeeNum" type="text" maxlength="11" placeholder="请输入员工号"></wInput>
 				<wInput v-model="passData" type="password" maxlength="11" placeholder="请输入新密码" isShowPass></wInput>
-
 				<wInput v-model="verCode" type="number" maxlength="4" placeholder="验证码" isShowCode codeText="获取重置码" setTime="30"
 				 ref="runCode" @setCode="getVerCode()"></wInput>
 			</view>
@@ -39,6 +47,11 @@
 			_this = this;
 		},
 		methods: {
+			backlogin() {
+				uni.navigateBack({
+					delta: 1
+				})
+			},
 			getVerCode() {
 				//获取验证码
 				if (_this.phoneData.length != 11) {
@@ -111,4 +124,11 @@
 <style>
 	@import url("../../components/watch-login/css/icon.css");
 	@import url("./css/main.css");
+
+	/* 	.forget{
+		background-color: #f0f0f0;
+		} */
+	.tips {
+		color: #ff6735;
+	}
 </style>

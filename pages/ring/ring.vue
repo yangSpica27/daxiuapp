@@ -2,7 +2,7 @@
 	<view>
 		<!-- 顶栏 -->
 		<view class="cu-bar shadow" style="background: linear-gradient(to right, #1890FF, #69C0FF);">
-			<view class="action">
+			<view class="action" @click="backpage">
 				<text class="cuIcon-back text-white"></text>
 				<text class="text-white">返回</text>
 			</view>
@@ -179,6 +179,11 @@
 			},
 			startDetail:function(){
 				
+			},
+			backpage(){
+				uni.navigateBack({
+					delta: 1
+				})
 			}
 			
 		}

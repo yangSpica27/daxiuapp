@@ -17,7 +17,10 @@
 		//大布局页
 		{
 			"path": "pages/index/index",
-			"style": {}
+			"style": {
+				"disableScroll": true, // 禁止原生页面滚动, 解决Android小程序下拉卡顿的问题
+				"mp-alipay":{"allowsBounceVertical":"NO"} // 取消支付宝和钉钉小程序的iOS回弹,避免与下拉刷新冲突 (可统一配在 'globalStyle')
+			}
 		}
 	    ,{
             "path" : "pages/startcheck/startcheck",
@@ -65,6 +68,10 @@
 		"navigationBarTitleText": "大修质量",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
-		"navigationStyle": "custom"
+		"navigationStyle": "custom",
+		"backgroundColorTop":"#FFFFFF",
+		"app-plus" : {
+			"bounce" : "none" // 取消APP端iOS回弹,避免与下拉刷新冲突 (可统一配在 'globalStyle')
+		}
 	}
 }
